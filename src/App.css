@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-main);
+}
+
+.main-wrapper {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+}

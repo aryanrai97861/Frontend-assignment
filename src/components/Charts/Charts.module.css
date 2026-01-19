@@ -1,0 +1,359 @@
+.chartsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Donut Chart Styles */
+.donutChartWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+}
+
+.donutCenter {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+}
+
+.donutIcons {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.donutIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.donutLabel {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+    text-align: center;
+    max-width: 80px;
+}
+
+/* Bar Chart Styles */
+.barChartContainer {
+    height: 200px;
+}
+
+.horizontalBarItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.barLabel {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-width: 100px;
+}
+
+.barIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barName {
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+}
+
+.barTrack {
+    flex: 1;
+    height: 8px;
+    background: var(--bg-main);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+}
+
+.barValue {
+    min-width: 70px;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    text-align: right;
+}
+
+.barPercent {
+    min-width: 35px;
+    font-size: var(--font-size-sm);
+    color: var(--text-tertiary);
+    text-align: right;
+}
+
+/* Mini Bar Chart */
+.miniBarChart {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-2);
+    height: 80px;
+    padding-top: var(--space-2);
+}
+
+.miniBar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.miniBarFill {
+    width: 100%;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    transition: height var(--transition-slow);
+}
+
+.miniBarLabel {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+}
+
+.miniBarValue {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+/* Line Chart */
+.lineChartContainer {
+    height: 120px;
+    position: relative;
+}
+
+/* Pie Chart Stats */
+.pieChartSection {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+}
+
+.pieChartWrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.pieCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.piePercentage {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+.pieValue {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+.pieStats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.pieStat {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.pieStatDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.pieStatName {
+    flex: 1;
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+}
+
+.pieStatValue {
+    font-size: var(--font-size-sm);
+    color: var(--text-tertiary);
+}
+
+.pieStatChange {
+    font-size: var(--font-size-xs);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+.pieStatChange.positive {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+/* Tabs */
+.tabsContainer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-1);
+    background: var(--bg-main);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-3);
+}
+
+.tab {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.tab:hover {
+    color: var(--text-primary);
+}
+
+.tab.active {
+    background: var(--text-primary);
+    color: white;
+}
+
+/* Platform Value Card */
+.platformValueCard {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    border: 1px solid #EAEAEC;
+}
+
+.platformValueHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.platformValueIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.platformValueTitle {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+}
+
+.platformValueAmount {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+.platformValueStats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.platformValueStat {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.statLabel {
+    color: var(--text-tertiary);
+}
+
+.statNumber {
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+/* Sales Dynamic Section */
+.salesDynamicSection {
+    margin-top: var(--space-3);
+}
+
+.salesDynamicTitle {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2);
+}
+
+/* User Stat Mini */
+.userStatMini {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+    border-top: 1px solid #F0F0F2;
+    margin-top: var(--space-3);
+}
+
+.miniStatValue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 30px;
+}
+
+.miniStatNumber {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+.miniStatLabel {
+    font-size: 9px;
+    color: var(--text-tertiary);
+}
+
+/* Badge Colors */
+.coralBadge {
+    background: var(--primary-coral);
+    color: white;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+}
