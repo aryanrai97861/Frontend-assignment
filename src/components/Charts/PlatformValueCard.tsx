@@ -84,7 +84,7 @@ export const PlatformValueCard = () => {
                             tick={{ fontSize: 10, fill: '#9CA3AF' }}
                         />
                         <Bar dataKey="value" radius={[4, 4, 0, 0]}>
-                            {barData.map((entry, index) => (
+                            {barData.map((_entry, index) => (
                                 <Cell
                                     key={`cell-${index}`}
                                     fill={index === 0 ? '#EA4C89' : index === 1 ? '#FFB7C5' : '#FFD9E0'}
